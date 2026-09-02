@@ -91,7 +91,7 @@
     }
     .nav-links a:hover { color: var(--accent); }
 
-    /* LAYOUT & SECTIONS (TIGHTENED SPACING) */
+    /* LAYOUT & SECTIONS */
     section { padding: 2rem 1.5rem; max-width: 1100px; margin: 0 auto; }
     .section-title {
       font-family: var(--font-display);
@@ -111,13 +111,19 @@
       border-radius: 2px;
     }
 
-    /* HERO */
+    /* HERO SECTION WITH PROFILE IMAGE */
     .hero {
       padding-top: 6rem;
       padding-bottom: 1rem;
+    }
+    .hero-container {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.5rem;
+    }
+    .hero-text {
+      flex: 1;
     }
     .hero .pre-title { 
       font-family: var(--font-display);
@@ -140,6 +146,19 @@
       color: var(--accent);
       font-weight: 600;
       letter-spacing: 0.5px;
+    }
+
+    /* PROFILE IMAGE STYLING */
+    .profile-container {
+      flex-shrink: 0;
+    }
+    .profile-img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
     }
 
     /* ABOUT */
@@ -303,8 +322,17 @@
       backdrop-filter: blur(12px);
     }
 
-    /* MOBILE NAV */
+    /* MOBILE NAV & RESPONSIVE LAYOUT */
     @media (max-width: 768px) {
+      .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 1.5rem;
+      }
+      .profile-img {
+        width: 160px;
+        height: 160px;
+      }
       .hero h1 { font-size: 2.5rem; }
       .nav-links { display: none; }
       section { padding: 1.5rem 1rem; }
@@ -327,11 +355,18 @@
   </nav>
 
   <section class="hero">
-    <span class="pre-title">Hey, I'm</span>
-    <h1>Akhil Punna</h1>
-    <p>Data Engineer by profession. Technology enthusiast by passion.<br>
-    I’ve spent the last 10+ years turning enterprise data challenges into scalable cloud technology solutions.</p>
-    <p class="tagline-text">Build. Automate. Scale. Repeat.</p>
+    <div class="hero-container">
+      <div class="hero-text">
+        <span class="pre-title">Hey, I'm</span>
+        <h1>Akhil Punna</h1>
+        <p>Data Engineer by profession. Technology enthusiast by passion.<br>
+        I’ve spent the last 10+ years turning enterprise data challenges into scalable cloud technology solutions.</p>
+        <p class="tagline-text">Build. Automate. Scale. Repeat.</p>
+      </div>
+      <div class="profile-container">
+        <img src="profile.jpg" alt="Akhil Punna" class="profile-img">
+      </div>
+    </div>
   </section>
 
   <section id="about">
