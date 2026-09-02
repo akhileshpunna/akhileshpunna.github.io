@@ -8,17 +8,24 @@
     /* RESET & VARS */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
-      --bg: #0b0f19;
-      --card-bg: #111827;
-      --border: #1f2937;
-      --accent: #3b82f6;
-      --accent-hover: #2563eb;
-      --text: #f3f4f6;
-      --text-muted: #9ca3af;
+      --bg-dark: #05070d;
+      --card-bg: rgba(15, 23, 42, 0.75);
+      --border: rgba(255, 255, 255, 0.1);
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
     }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg);
+      background-color: var(--bg-dark);
+      /* Starry background using stars.png */
+      background-image: url('stars.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
       color: var(--text);
       line-height: 1.6;
     }
@@ -28,8 +35,8 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(11, 15, 25, 0.9);
-      backdrop-filter: blur(10px);
+      background: rgba(5, 7, 13, 0.85);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
       z-index: 1000;
     }
@@ -91,17 +98,25 @@
     .cta-btn {
       display: inline-block;
       background: var(--accent);
-      color: #fff;
+      color: #0f172a;
       padding: 0.8rem 1.75rem;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
       width: fit-content;
-      transition: background 0.2s;
+      transition: all 0.2s ease;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
     }
-    .cta-btn:hover { background: var(--accent-hover); }
+    .cta-btn:hover { background: #7dd3fc; box-shadow: 0 0 25px rgba(56, 189, 248, 0.5); }
 
     /* ABOUT */
+    .about-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+      border-radius: 12px;
+      padding: 2.5rem;
+    }
     .about-text p { color: var(--text-muted); margin-bottom: 1.25rem; font-size: 1.05rem; }
 
     /* SKILLS */
@@ -113,17 +128,18 @@
     .skill-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 8px;
+      backdrop-filter: blur(8px);
+      border-radius: 12px;
       padding: 1.75rem;
     }
     .skill-card h3 { margin-bottom: 1rem; color: var(--accent); font-size: 1.2rem; }
     .tag-container { display: flex; flex-wrap: wrap; gap: 0.5rem; }
     .tag {
-      background: rgba(59, 130, 246, 0.1);
-      color: #bfdbfe;
-      border: 1px solid rgba(59, 130, 246, 0.2);
+      background: rgba(56, 189, 248, 0.1);
+      color: #bae6fd;
+      border: 1px solid rgba(56, 189, 248, 0.25);
       padding: 0.3rem 0.75rem;
-      border-radius: 4px;
+      border-radius: 6px;
       font-size: 0.85rem;
     }
 
@@ -136,11 +152,17 @@
     .project-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 8px;
+      backdrop-filter: blur(8px);
+      border-radius: 12px;
       padding: 1.75rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
     }
     .project-card h3 { margin-bottom: 0.5rem; font-size: 1.25rem; }
     .project-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
@@ -152,6 +174,8 @@
       text-align: center;
       color: var(--text-muted);
       font-size: 0.9rem;
+      background: rgba(5, 7, 13, 0.9);
+      backdrop-filter: blur(12px);
     }
 
     /* MOBILE NAV */
@@ -185,7 +209,7 @@
 
   <section id="about">
     <h2 class="section-title">About Me</h2>
-    <div class="about-text">
+    <div class="about-card about-text">
       <p><strong>Husband, Father, Data & Cloud Engineer</strong></p>
       <p>I’m Akhil, originally from India, where my journey in technology began with a Master’s in VLSI Systems from JNTUH. Driven by curiosity, a passion for learning, and a desire to explore the world beyond what I knew, I moved to the United States in 2013 to pursue my Master’s in Electrical Engineering at San Francisco Bay University in Fremont, California.</p>
       <p>While exploring different areas of technology, I discovered a growing interest in data and the way it moves, transforms, and creates value for businesses. I started taking online courses to deepen my understanding of databases and SQL, which eventually led me to begin my professional journey as a SQL Developer. That experience opened the door to the world of ETL and data integration, where I discovered Informatica and became fascinated by how complex data from different systems could be transformed into meaningful, reliable information.</p>
