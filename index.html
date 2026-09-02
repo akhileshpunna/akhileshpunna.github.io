@@ -101,7 +101,7 @@
       border-radius: 2px;
     }
 
-    /* HERO (TIGHTENED SPACING) */
+    /* HERO */
     .hero {
       padding-top: 8rem;
       padding-bottom: 1.5rem;
@@ -138,52 +138,58 @@
       border-bottom-color: var(--accent);
     }
 
-    /* SKILLS SECTION */
+    /* SKILLS SECTION (MATCHING ANTHONY MAZZIE DESIGN) */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.5rem;
     }
     .skill-card {
-      background: rgba(15, 23, 42, 0.6);
-      border: 1px solid var(--border);
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(12px);
       border-radius: 12px;
-      padding: 1.5rem;
-      transition: all 0.3s ease;
+      padding: 1.75rem 1.5rem;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .skill-card:hover {
-      border-color: rgba(56, 189, 248, 0.4);
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      border-color: rgba(56, 189, 248, 0.5);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(56, 189, 248, 0.15);
     }
     .skill-card h3 {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
+      font-weight: 600;
       color: var(--text);
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.5rem;
     }
     .skill-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 0.65rem;
     }
     .skill-item {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--text-muted);
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.6rem;
+      transition: color 0.2s;
+    }
+    .skill-card:hover .skill-item {
+      color: #e2e8f0;
     }
     .skill-item::before {
-      content: '▹';
+      content: "•";
       color: var(--accent);
-      font-size: 0.9rem;
+      font-size: 1.2rem;
+      line-height: 1;
     }
 
     /* PROJECTS */
@@ -275,46 +281,43 @@
     <div class="skills-grid">
       
       <div class="skill-card">
-        <h3>⚡ Core Engineering</h3>
+        <h3>Programming & Scripting</h3>
         <ul class="skill-list">
-          <li class="skill-item">SQL & Advanced Queries</li>
-          <li class="skill-item">Python Scripting</li>
-          <li class="skill-item">UNIX / Linux Shell</li>
-          <li class="skill-item">Informatica PowerCenter</li>
-          <li class="skill-item">Informatica IICS / IDMC</li>
+          <li class="skill-item">SQL / Advanced Querying</li>
+          <li class="skill-item">Python</li>
+          <li class="skill-item">UNIX / Linux Shell Scripting</li>
         </ul>
       </div>
 
       <div class="skill-card">
-        <h3>☁️ Cloud & Warehousing</h3>
+        <h3>Cloud & Warehousing</h3>
         <ul class="skill-list">
           <li class="skill-item">Snowflake Data Cloud</li>
           <li class="skill-item">Azure Data Factory (ADF)</li>
-          <li class="skill-item">AWS & Azure Infrastructure</li>
+          <li class="skill-item">Amazon Web Services (AWS)</li>
+          <li class="skill-item">Microsoft Azure</li>
           <li class="skill-item">Amazon Redshift</li>
-          <li class="skill-item">Hadoop / Spark</li>
         </ul>
       </div>
 
       <div class="skill-card">
-        <h3>🔄 Integration & Data</h3>
+        <h3>ETL & Integration</h3>
         <ul class="skill-list">
-          <li class="skill-item">ETL / ELT Pipelines</li>
-          <li class="skill-item">Data Modeling (Star/Snowflake)</li>
-          <li class="skill-item">Data Governance & Quality</li>
-          <li class="skill-item">REST API Integration</li>
+          <li class="skill-item">Informatica PowerCenter</li>
+          <li class="skill-item">Informatica IICS / IDMC</li>
+          <li class="skill-item">Informatica PowerExchange</li>
+          <li class="skill-item">REST / Web Services APIs</li>
           <li class="skill-item">Mainframe & Salesforce Data</li>
         </ul>
       </div>
 
       <div class="skill-card">
-        <h3>🛠️ Databases & Tools</h3>
+        <h3>Databases & Architecture</h3>
         <ul class="skill-list">
           <li class="skill-item">Oracle, SQL Server, PostgreSQL</li>
-          <li class="skill-item">Teradata & DB2</li>
-          <li class="skill-item">GitHub / Git Workflows</li>
-          <li class="skill-item">Control-M Scheduling</li>
-          <li class="skill-item">Agile / Scrum Delivery</li>
+          <li class="skill-item">Teradata, IBM DB2</li>
+          <li class="skill-item">Data Modeling (Star / Snowflake)</li>
+          <li class="skill-item">Data Governance & Quality (IDQ)</li>
         </ul>
       </div>
 
