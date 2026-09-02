@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2299.77">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Akhil Punna | Lead Data &amp; Cloud Engineer&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* RESET &amp; VARS */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>* { margin: 0; padding: 0; box-sizing: border-box; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--bg: #0b0f19;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--card-bg: #111827;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--border: #1f2937;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--accent: #3b82f6;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--accent-hover: #2563eb;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--text: #f3f4f6;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--text-muted: #9ca3af;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: var(--bg);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* NAV */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>nav {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(11, 15, 25, 0.9);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(10px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>z-index: 1000;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-container {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 1100px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1.25rem 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.logo {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: -0.5px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.logo span { color: var(--accent); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-links { display: flex; gap: 2rem; list-style: none; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-links a {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text-muted);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: color 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-links a:hover { color: var(--accent); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* LAYOUT &amp; SECTIONS */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>section { padding: 6rem 1.5rem; max-width: 1100px; margin: 0 auto; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-title {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-title::after {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content: '';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>bottom: -8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>left: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 3px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* HERO */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding-top: 5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero pre-title { color: var(--accent); font-weight: 600; font-size: 1.1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero h1 { font-size: 3.5rem; margin: 0.5rem 0 1rem; line-height: 1.1; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin-bottom: 2rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cta-btn {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.8rem 1.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: fit-content;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: background 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cta-btn:hover { background: var(--accent-hover); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ABOUT */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.about-text p { color: var(--text-muted); margin-bottom: 1.25rem; font-size: 1.05rem; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* SKILLS */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.skills-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.skill-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--card-bg);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.skill-card h3 { margin-bottom: 1rem; color: var(--accent); font-size: 1.2rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tag-container { display: flex; flex-wrap: wrap; gap: 0.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tag {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(59, 130, 246, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #bfdbfe;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(59, 130, 246, 0.2);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.3rem 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.85rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* PROJECTS */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.projects-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.project-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--card-bg);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.project-card h3 { margin-bottom: 0.5rem; font-size: 1.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.project-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* FOOTER */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-top: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 3rem 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text-muted);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* MOBILE NAV */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.hero h1 { font-size: 2.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.nav-links { display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#" class="logo"&gt;Akhil&lt;span&gt;.Data&lt;/span&gt;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;ul class="nav-links"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="#skills"&gt;Skills&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="#projects"&gt;Projects&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="pre-title"&gt;Hey, I'm&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Akhil Punna&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Data Engineer by profession. Technology enthusiast by passion.&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>I’ve spent the last 10+ years turning enterprise data challenges into scalable cloud technology solutions.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#projects" class="cta-btn"&gt;Build. Automate. Scale. Repeat.&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="about"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;About Me&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="about-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&lt;strong&gt;Husband, Father, Data &amp; Cloud Engineer&lt;/strong&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;I’m Akhil, originally from India, where my journey in technology began with a Master’s in VLSI Systems from JNTUH. Driven by curiosity, a passion for learning, and a desire to explore the world beyond what I knew, I moved to the United States in 2013 to pursue my Master’s in Electrical Engineering at San Francisco Bay University in Fremont, California.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;While exploring different areas of technology, I discovered a growing interest in data and the way it moves, transforms, and creates value for businesses. I started taking online courses to deepen my understanding of databases and SQL, which eventually led me to begin my professional journey as a SQL Developer. That experience opened the door to the world of ETL and data integration, where I discovered Informatica and became fascinated by how complex data from different systems could be transformed into meaningful, reliable information.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Over the years, my curiosity to learn and my passion for solving data problems have taken me through different technologies, organizations, and challenges across the United States. Today, with 10+ years of experience, I work as a Lead Data / Cloud Engineer, designing scalable data solutions and helping teams modernize their data platforms.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;My journey started with curiosity. Data became my passion. And technology became my way of building what comes next.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="skills"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Skills &amp; Technologies&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="skills-grid"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="skill-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Core Technologies&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tag-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Informatica PowerCenter&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;IICS/IDMC&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Azure Data Factory&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;AWS&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Azure&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Snowflake&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Redshift&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;SQL&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Python&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Oracle&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;SQL Server&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;PostgreSQL&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Teradata&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Hadoop&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Spark&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="skill-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Data &amp; Integration&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tag-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;ETL/ELT&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Data Warehousing&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Data Modeling&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Data Migration&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Data Quality&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Data Governance&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Data Architecture&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;REST/Web Services&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Salesforce&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Mainframe Integration&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="skill-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Engineering &amp; Delivery&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tag-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;UNIX/Linux&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Shell Scripting&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;GitHub&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Control-M&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Agile/Scrum&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Performance Tuning&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Production Support&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Deployment&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="skill-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Professional Strengths&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tag-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Technical Leadership&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Problem Solving&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Solution Design&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Analytical Thinking&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Stakeholder Communication&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Requirements Analysis&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="projects"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Key Focus Areas &amp; Projects&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="projects-grid"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="project-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;☁️ Cloud Data Migration&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Designed and developed pipelines to migrate data from legacy systems into modern cloud platforms using ADF, Informatica IDMC, Azure SQL, AWS, and Snowflake.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tag-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Azure&lt;/span&gt;&lt;span class="tag"&gt;ADF&lt;/span&gt;&lt;span class="tag"&gt;Snowflake&lt;/span&gt;&lt;span class="tag"&gt;AWS&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="project-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;🔄 Enterprise ETL &amp; Integration&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Built end-to-end ETL solutions integrating data across complex ecosystems including Oracle, SQL Server, DB2, Teradata, Salesforce, and flat files.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tag-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Informatica&lt;/span&gt;&lt;span class="tag"&gt;SQL&lt;/span&gt;&lt;span class="tag"&gt;Oracle&lt;/span&gt;&lt;span class="tag"&gt;Salesforce&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="project-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;🏗️ Legacy Mainframe Pipeline&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Extracted data from IBM z/OS, DB2, COBOL, VSAM, and GDG files and migrated it to modern cloud environments with high-volume accuracy.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tag-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;PowerExchange&lt;/span&gt;&lt;span class="tag"&gt;COBOL&lt;/span&gt;&lt;span class="tag"&gt;DB2&lt;/span&gt;&lt;span class="tag"&gt;Snowflake&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="project-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;📊 Data Warehouse &amp; Modeling&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Designed data warehouse solutions using dimensional modeling, Star Schema, and Snowflake Schema to support enterprise analytics and reporting.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tag-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Data Modeling&lt;/span&gt;&lt;span class="tag"&gt;Star Schema&lt;/span&gt;&lt;span class="tag"&gt;ERWIN&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="project-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;🛡️ Data Quality &amp; Governance&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Implemented validation, exception handling, profiling, and governance frameworks to improve enterprise data accuracy using IDQ and MDM.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tag-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag"&gt;Informatica IDQ&lt;/span&gt;&lt;span class="tag"&gt;MDM&lt;/span&gt;&lt;span class="tag"&gt;Data Profiling&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;footer id="contact"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Connect with me for Data &amp; Cloud Architecture opportunities.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="margin-top: 0.5rem;"&gt;Akhil Punna &amp;copy; 2026. All rights reserved.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
