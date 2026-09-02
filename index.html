@@ -7,6 +7,7 @@
   <style>
     /* RESET & VARS */
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     :root {
       --bg-dark: #05070d;
       --card-bg: rgba(15, 23, 42, 0.75);
@@ -20,7 +21,6 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background-color: var(--bg-dark);
-      /* Starry background using stars.png */
       background-image: url('stars.png');
       background-size: cover;
       background-position: center;
@@ -46,16 +46,33 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.25rem 1.5rem;
+      padding: 1rem 1.5rem;
     }
-    .logo {
-      font-weight: 700;
-      font-size: 1.25rem;
+    
+    /* Fancy AP Logo Button */
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(2, 132, 199, 0.4));
+      border: 1px solid var(--accent);
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.1rem;
       letter-spacing: -0.5px;
-      color: var(--text);
       text-decoration: none;
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.25);
+      transition: all 0.3s ease;
     }
-    .logo span { color: var(--accent); }
+    .logo-badge:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.4), rgba(2, 132, 199, 0.6));
+    }
+
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a {
       color: var(--text-muted);
@@ -118,29 +135,62 @@
       padding: 2.5rem;
     }
     .about-text p { color: var(--text-muted); margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .inline-link {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .inline-link:hover {
+      border-bottom-color: var(--accent);
+    }
 
-    /* SKILLS */
+    /* SKILLS SECTION (ANTHONY MAZZIE STYLED) */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1.5rem;
     }
     .skill-card {
-      background: var(--card-bg);
+      background: rgba(15, 23, 42, 0.6);
       border: 1px solid var(--border);
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(12px);
       border-radius: 12px;
-      padding: 1.75rem;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
     }
-    .skill-card h3 { margin-bottom: 1rem; color: var(--accent); font-size: 1.2rem; }
-    .tag-container { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .tag {
-      background: rgba(56, 189, 248, 0.1);
-      color: #bae6fd;
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      padding: 0.3rem 0.75rem;
-      border-radius: 6px;
-      font-size: 0.85rem;
+    .skill-card:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+    .skill-card h3 {
+      font-size: 1.1rem;
+      color: var(--text);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+    .skill-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .skill-item {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .skill-item::before {
+      content: '▹';
+      color: var(--accent);
+      font-size: 0.9rem;
     }
 
     /* PROJECTS */
@@ -166,6 +216,15 @@
     }
     .project-card h3 { margin-bottom: 0.5rem; font-size: 1.25rem; }
     .project-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .tag-container { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tag {
+      background: rgba(56, 189, 248, 0.1);
+      color: #bae6fd;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 0.3rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+    }
 
     /* FOOTER */
     footer {
@@ -189,7 +248,7 @@
 
   <nav>
     <div class="nav-container">
-      <a href="#" class="logo">Akhil<span>.Data</span></a>
+      <a href="#about" class="logo-badge" title="Go to About Me">AP</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -211,7 +270,7 @@
     <h2 class="section-title">About Me</h2>
     <div class="about-card about-text">
       <p><strong>Husband, Father, Data & Cloud Engineer</strong></p>
-      <p>I’m Akhil, originally from India, where my journey in technology began with a Master’s in VLSI Systems from JNTUH. Driven by curiosity, a passion for learning, and a desire to explore the world beyond what I knew, I moved to the United States in 2013 to pursue my Master’s in Electrical Engineering at San Francisco Bay University in Fremont, California.</p>
+      <p>I’m Akhil, originally from India, where my journey in technology began with a Master’s in VLSI Systems from JNTUH. Driven by curiosity, a passion for learning, and a desire to explore the world beyond what I knew, I moved to the United States in 2013 to pursue my Master’s in Electrical Engineering at <a href="https://www.sfbu.edu/" target="_blank" rel="noopener noreferrer" class="inline-link">San Francisco Bay University</a> in Fremont, California.</p>
       <p>While exploring different areas of technology, I discovered a growing interest in data and the way it moves, transforms, and creates value for businesses. I started taking online courses to deepen my understanding of databases and SQL, which eventually led me to begin my professional journey as a SQL Developer. That experience opened the door to the world of ETL and data integration, where I discovered Informatica and became fascinated by how complex data from different systems could be transformed into meaningful, reliable information.</p>
       <p>Over the years, my curiosity to learn and my passion for solving data problems have taken me through different technologies, organizations, and challenges across the United States. Today, with 10+ years of experience, I work as a Lead Data / Cloud Engineer, designing scalable data solutions and helping teams modernize their data platforms.</p>
       <p>My journey started with curiosity. Data became my passion. And technology became my way of building what comes next.</p>
@@ -223,66 +282,47 @@
     <div class="skills-grid">
       
       <div class="skill-card">
-        <h3>Core Technologies</h3>
-        <div class="tag-container">
-          <span class="tag">Informatica PowerCenter</span>
-          <span class="tag">IICS/IDMC</span>
-          <span class="tag">Azure Data Factory</span>
-          <span class="tag">AWS</span>
-          <span class="tag">Azure</span>
-          <span class="tag">Snowflake</span>
-          <span class="tag">Redshift</span>
-          <span class="tag">SQL</span>
-          <span class="tag">Python</span>
-          <span class="tag">Oracle</span>
-          <span class="tag">SQL Server</span>
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">Teradata</span>
-          <span class="tag">Hadoop</span>
-          <span class="tag">Spark</span>
-        </div>
+        <h3>⚡ Core Engineering</h3>
+        <ul class="skill-list">
+          <li class="skill-item">SQL & Advanced Queries</li>
+          <li class="skill-item">Python Scripting</li>
+          <li class="skill-item">UNIX / Linux Shell</li>
+          <li class="skill-item">Informatica PowerCenter</li>
+          <li class="skill-item">Informatica IICS / IDMC</li>
+        </ul>
       </div>
 
       <div class="skill-card">
-        <h3>Data & Integration</h3>
-        <div class="tag-container">
-          <span class="tag">ETL/ELT</span>
-          <span class="tag">Data Warehousing</span>
-          <span class="tag">Data Modeling</span>
-          <span class="tag">Data Migration</span>
-          <span class="tag">Data Quality</span>
-          <span class="tag">Data Governance</span>
-          <span class="tag">Data Architecture</span>
-          <span class="tag">REST/Web Services</span>
-          <span class="tag">Salesforce</span>
-          <span class="tag">Mainframe Integration</span>
-        </div>
+        <h3>☁️ Cloud & Warehousing</h3>
+        <ul class="skill-list">
+          <li class="skill-item">Snowflake Data Cloud</li>
+          <li class="skill-item">Azure Data Factory (ADF)</li>
+          <li class="skill-item">AWS & Azure Infrastructure</li>
+          <li class="skill-item">Amazon Redshift</li>
+          <li class="skill-item">Hadoop / Spark</li>
+        </ul>
       </div>
 
       <div class="skill-card">
-        <h3>Engineering & Delivery</h3>
-        <div class="tag-container">
-          <span class="tag">UNIX/Linux</span>
-          <span class="tag">Shell Scripting</span>
-          <span class="tag">GitHub</span>
-          <span class="tag">Control-M</span>
-          <span class="tag">Agile/Scrum</span>
-          <span class="tag">Performance Tuning</span>
-          <span class="tag">Production Support</span>
-          <span class="tag">Deployment</span>
-        </div>
+        <h3>🔄 Integration & Data</h3>
+        <ul class="skill-list">
+          <li class="skill-item">ETL / ELT Pipelines</li>
+          <li class="skill-item">Data Modeling (Star/Snowflake)</li>
+          <li class="skill-item">Data Governance & Quality</li>
+          <li class="skill-item">REST API Integration</li>
+          <li class="skill-item">Mainframe & Salesforce Data</li>
+        </ul>
       </div>
 
       <div class="skill-card">
-        <h3>Professional Strengths</h3>
-        <div class="tag-container">
-          <span class="tag">Technical Leadership</span>
-          <span class="tag">Problem Solving</span>
-          <span class="tag">Solution Design</span>
-          <span class="tag">Analytical Thinking</span>
-          <span class="tag">Stakeholder Communication</span>
-          <span class="tag">Requirements Analysis</span>
-        </div>
+        <h3>🛠️ Databases & Tools</h3>
+        <ul class="skill-list">
+          <li class="skill-item">Oracle, SQL Server, PostgreSQL</li>
+          <li class="skill-item">Teradata & DB2</li>
+          <li class="skill-item">GitHub / Git Workflows</li>
+          <li class="skill-item">Control-M Scheduling</li>
+          <li class="skill-item">Agile / Scrum Delivery</li>
+        </ul>
       </div>
 
     </div>
